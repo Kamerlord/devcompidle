@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEditor;
 
+
 public class Touchable : Text
 {
     protected override void Awake()
@@ -16,11 +17,11 @@ public class Touchable : Text
  
 
  
- [CustomEditor(typeof(Touchable))]
-public class Touchable_Editor : Editor
-{
-    public override void OnInspectorGUI()
-    {
-        // Do nothing
-    }
-}
+// [CustomEditor(typeof(Touchable))]
+//public class Touchable_Editor : Editor
+//{
+//    public override void OnInspectorGUI()
+//    {
+//        // Do nothing
+//    }
+//}
