@@ -2,21 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class ScreenTap : MonoBehaviour {
 
     public GameManager GM;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
-    public void TapScreen()
+    public void ScreenClick()
     {
         GM.cash += GM.cashPerClick;
     }
