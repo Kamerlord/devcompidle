@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour {
 
     public float worker1Level = 0;
     public bool worker1TimerOn = false;
+    public bool screenTapped = false;
 
 
 
