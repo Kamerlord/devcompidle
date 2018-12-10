@@ -10,47 +10,24 @@ public class GameManager : MonoBehaviour {
 
     public float cash = 0;
     public float cashPerClick = 1;
-    public float cashPerSecond = 0;
 
-    public float worker1Level = 0;
-    public bool worker1TimerOn = false;
-    public bool screenTapped = false;
+    //Upgrades
 
+    //Summoner Novice
 
+    public float summonerNovicePrice = 100;
+    public float summonerNoviceLevel = 1;
+    public bool summonerNoviceBought = false;
+    public float summonerNoviceIncome = 1;
+    public float summonerNoviceSpeed = 1;
 
-
-    
-
-	// Use this for initialization
 	void Start () {
 
-        //Screen stays always on, never go to sleep while game is on
-        Screen.sleepTimeout = SleepTimeout.NeverSleep;
 
 	}
 	
-	// Update is called once per frame
 	void Update () {
-        cashText.text = "Cash: " + cash;
-
-        if(worker1Level >= 1 && worker1TimerOn == false)
-        {
-            StartCoroutine(time());
-            worker1TimerOn = true;
-        }
+        cashText.text = cash.ToString();
 	}
 
-    private void TimeAdd()
-    {
-        cash += 1;
-    }
-
-    IEnumerator time()
-    {
-        while(true)
-        {
-            TimeAdd();
-            yield return new WaitForSeconds(1);
-        }
-    }
 }

@@ -4,21 +4,28 @@ using UnityEngine;
 
 public class UpgradePanelShowHide : MonoBehaviour {
 
-    public GameObject Panel;
+    public GameObject UpgradePanel;
     int counter = 0;
 
     
 
-    public void showhidePanel()
+    public void ShowhidePanel()
     {
-        if (counter%2==0)
+        if (counter == 0)
         {
-            Panel.SetActive(true);
+            UpgradePanel.SetActive(true);
             counter = 1;
-        } else
+        }
+        else
         {
-            Panel.gameObject.SetActive(false);
+            UpgradePanel.SetActive(false);
             counter = 0;
         }
-    } 
+    }
+    
+    public void CloseUpgradePanel()
+    {
+        UpgradePanel.SetActive(false);
+        counter = 0;
+    }
 } 
